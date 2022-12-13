@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/configureStore';
 import App from './App';
 import Layout from './components/layout/Layout';
 import reportWebVitals from './reportWebVitals';
@@ -11,7 +13,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Layout>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </Layout>
     </BrowserRouter>
   </React.StrictMode>,

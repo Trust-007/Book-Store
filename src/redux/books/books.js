@@ -1,6 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = [];
+const initialState = [
+  { id: '1', title: 'Harry Potter', author: 'J.K.Rowling' },
+  { id: '2', title: 'Percy Jackson', author: 'Rick Riordan' },
+];
 
 const booksSlice = createSlice({
   name: 'books',
@@ -14,27 +17,14 @@ const booksSlice = createSlice({
           author: action.payload.author,
         };
         state.push(newBook);
-      } else {
-        return state;
       }
-      return '';
     },
     removeBook(state, action) {
-      if (action.payload) {
-        state.filter((book) => {
-          if (book.id !== action.payload) {
-            return book;
-          }
-          return '';
-        });
-      } else {
-        return state;
-      }
-      return '';
+      return state.filter((book) => book.id !== action.payload);
     },
   },
 });
 
-export const booksAction = booksSlice.actions;
+export const booksActions = booksSlice.actions;
 
 export default booksSlice.reducer;

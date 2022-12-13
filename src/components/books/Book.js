@@ -1,7 +1,6 @@
-/*eslint-disable */
-import { useDispatch } from "react-redux";
-import { booksActions } from "../../redux/books/books";
-import classes from "./Book.module.css";
+import { useDispatch } from 'react-redux';
+import { booksActions } from '../../redux/books/books';
+import classes from './Book.module.css';
 
 const Book = (props) => {
   const { title, author, id } = props;

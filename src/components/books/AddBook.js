@@ -1,21 +1,39 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { booksActions } from '../../redux/books/books';
+import { v4 as uuid } from 'uuid';
+import { sendBook } from '../../redux/thunks/actionThunks';
 import classes from './AddBook.module.css';
 
 const AddBooks = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [error, setError] = useState(false);
   const dispatch = useDispatch();
+
   const authorInputHandler = (e) => {
-    setTitle(e.target.value);
-  };
-  const titleInputHandler = (e) => {
     setAuthor(e.target.value);
   };
+
+  const titleInputHandler = (e) => {
+    setTitle(e.target.value);
+  };
+
   const addBookHandler = (e) => {
     e.preventDefault();
-    dispatch(booksActions.addBook({ title, author }));
+    const id = uuid().slice(0, 8);
+    if (title !== '' && author !== '') {
+      const book = {
+        item_id: id,
+        title,
+        author,
+        category: author,
+      };
+
+      dispatch(sendBook(book));
+      setError(false);
+    } else {
+      setError(true);
+    }
   };
   return (
     <section className={classes.form_section}>
@@ -36,6 +54,7 @@ const AddBooks = () => {
         <button type="submit" onClick={addBookHandler}>
           Add
         </button>
+        {error && <p className={classes.error}>Invalid input</p>}
       </form>
     </section>
   );

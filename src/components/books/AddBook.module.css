@@ -5,3 +5,7 @@
 .form_section h3 {
   color: white;
 }
+
+.error {
+  color: red;
+}

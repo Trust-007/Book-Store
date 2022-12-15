@@ -1,12 +1,12 @@
 import { useDispatch } from 'react-redux';
-import { booksActions } from '../../redux/books/books';
+import { deleteBook } from '../../redux/thunks/actionThunks';
 import classes from './Book.module.css';
 
 const Book = (props) => {
   const { title, author, id } = props;
   const dispatch = useDispatch();
   const removeBookHandler = () => {
-    dispatch(booksActions.removeBook(id));
+    dispatch(deleteBook(id));
   };
   return (
     <div className={classes.book}>

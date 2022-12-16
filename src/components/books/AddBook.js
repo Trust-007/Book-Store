@@ -31,6 +31,8 @@ const AddBooks = () => {
 
       dispatch(sendBook(book));
       setError(false);
+      setAuthor('');
+      setTitle('');
     } else {
       setError(true);
     }
@@ -52,7 +54,7 @@ const AddBooks = () => {
           required
         />
         <button type="submit" onClick={addBookHandler}>
-          ADD
+          ADD BOOK
         </button>
         {error && <p className={classes.error}>Invalid input</p>}
       </form>

@@ -1,7 +1,7 @@
 .form_section {
   width: 90%;
   margin-inline: auto;
-  background-color: rgb(240, 235, 235);
+  background-color: rgb(250, 246, 246);
   border-top: 2px solid rgb(185, 179, 179);
   padding-top: 30px;
 }
@@ -28,6 +28,8 @@ form input {
   height: 15px;
   padding: 15px;
   font-size: 17px;
+  border: 1px solid rgb(212, 203, 203);
+  border-radius: 3px;
 }
 
 form button {
@@ -36,7 +38,7 @@ form button {
   padding-block: 10px;
   background-color: #0290ff;
   color: white;
-  font-size: 15px;
+  font-size: 13px;
   border-radius: 3px;
   cursor: pointer;
 }

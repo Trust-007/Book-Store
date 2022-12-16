@@ -1,0 +1,41 @@
+nav {
+  max-width: 90%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  margin-top: 5%;
+  margin-inline: auto;
+  padding-block: 30px;
+  background-color: white;
+  border-bottom: 1px solid rgb(180, 172, 172);
+}
+
+nav div {
+  font-size: 35px;
+  background-color: transparent;
+  color: #0290ff;
+  font-family: monospace;
+  font-weight: 700;
+  margin-left: 60px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  background-color: transparent;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #818080;
+  font-size: 17px;
+}
+
+.active {
+  color: black;
+}

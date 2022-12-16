@@ -1,0 +1,11 @@
+.category {
+  width: 50%;
+  margin-block: 10%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.category p {
+  font-size: 30px;
+  margin-bottom: 20px;
+}

@@ -4,7 +4,7 @@ import classes from './NavHeader.module.css';
 const NavHeader = () => (
   <>
     <nav>
-      <div>Book Store</div>
+      <div>BookStore cms</div>
       <ul>
         <li>
           <NavLink

@@ -1,3 +1,35 @@
 .book {
-  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: white;
+  width: 85%;
+  padding: 20px;
+  padding-inline: 40px;
+}
+
+.title_author {
+  width: 40%;
+  border-right: 1px solid rgb(68, 67, 67);
+}
+
+.title_author h3 {
+  font-size: 25px;
+}
+
+.title_author p {
+  font-size: 17px;
+  color: #037cd8;
+}
+
+button {
+  border: none;
+  padding-inline: 20px;
+  padding-block: 10px;
+  background-color: #0290ff;
+  color: white;
+  font-size: 15px;
+  border-radius: 3px;
+  cursor: pointer;
 }

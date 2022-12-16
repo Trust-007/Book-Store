@@ -10,8 +10,10 @@ const Book = (props) => {
   };
   return (
     <div className={classes.book}>
-      <h3>{title}</h3>
-      <p>{author}</p>
+      <div className={classes.title_author}>
+        <h3>{title}</h3>
+        <p>{author}</p>
+      </div>
       <button type="button" onClick={removeBookHandler}>
         Remove
       </button>

@@ -6,7 +6,7 @@ import classes from "./Layout.module.css";
 const Layout = (props) => {
   const { children } = props;
   return (
-    <div className={classes.layout}>
+    <div>
       <div>
         <NavHeader />
       </div>

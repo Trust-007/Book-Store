@@ -53,7 +53,7 @@ Book-Store
 
 # 📖 [Book-Store] <a name="about-project"></a>
 
-> **[Book-Storemath-magicians]** ******\_\_\_******.
+> **[Book-Store]** is a user friendly App that allows users to add their favorite books of all time and it's author, It also allows users to delete books. Made with great user interface.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -78,8 +78,6 @@ Book-Store
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
 
 - [Live Demo Link](#)
 

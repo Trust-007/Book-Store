@@ -31,28 +31,30 @@ const AddBooks = () => {
 
       dispatch(sendBook(book));
       setError(false);
+      setAuthor('');
+      setTitle('');
     } else {
       setError(true);
     }
   };
   return (
     <section className={classes.form_section}>
-      <h3> Add new Book</h3>
+      <h3> ADD NEW BOOK</h3>
       <form>
         <input
           type="text"
-          placeholder="Title"
+          placeholder="book title"
           onChange={titleInputHandler}
           required
         />
         <input
           type="text"
-          placeholder="Author"
+          placeholder="book author"
           onChange={authorInputHandler}
           required
         />
         <button type="submit" onClick={addBookHandler}>
-          Add
+          ADD BOOK
         </button>
         {error && <p className={classes.error}>Invalid input</p>}
       </form>

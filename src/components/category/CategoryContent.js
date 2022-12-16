@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { categoriesAction } from '../../redux/categories/categories';
+import classes from './CategoryContent.module.css';
 
 const CategoryContent = () => {
   const categories = useSelector((state) => state.categories);
@@ -8,8 +9,8 @@ const CategoryContent = () => {
     dispatch(categoriesAction.checkStatus());
   };
   return (
-    <div style={{ marginTop: '20%', marginLeft: '5%' }}>
-      <p style={{ color: 'white' }}>{categories}</p>
+    <div className={classes.category}>
+      <p>{categories}</p>
       <button type="button" onClick={checkStatusHandler}>
         Check status
       </button>
